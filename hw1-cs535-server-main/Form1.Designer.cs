@@ -29,163 +29,174 @@ namespace Server
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.server = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            button3 = new Button();
+            label4 = new Label();
+            label3 = new Label();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            rekey_button = new Button();
+            messageBox = new TextBox();
+            server = new Label();
+            button4 = new Button();
+            SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(47, 341);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 54);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Start\r\n\r\n\r\n";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.Location = new Point(22, 166);
+            button3.Margin = new Padding(1);
+            button3.Name = "button3";
+            button3.Size = new Size(68, 26);
+            button3.TabIndex = 21;
+            button3.Text = "Start\r\n\r\n\r\n";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 41);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Host:\r\n";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            label4.AutoSize = true;
+            label4.Location = new Point(22, 95);
+            label4.Margin = new Padding(1, 0, 1, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(43, 20);
+            label4.TabIndex = 20;
+            label4.Text = "Host:\r\n";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 260);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 41);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Port:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            label3.AutoSize = true;
+            label3.Location = new Point(22, 127);
+            label3.Margin = new Padding(1, 0, 1, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 20);
+            label3.TabIndex = 19;
+            label3.Text = "Port:";
+            label3.Click += label3_Click;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(140, 260);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(239, 47);
-            this.textBox3.TabIndex = 18;
-            this.textBox3.Text = "8090";
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            textBox3.Location = new Point(66, 127);
+            textBox3.Margin = new Padding(1);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(115, 27);
+            textBox3.TabIndex = 18;
+            textBox3.Text = "8090";
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(140, 189);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(239, 47);
-            this.textBox2.TabIndex = 17;
-            this.textBox2.Text = "127.0.0.1";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            textBox2.Location = new Point(66, 92);
+            textBox2.Margin = new Padding(1);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(115, 27);
+            textBox2.TabIndex = 17;
+            textBox2.Text = "127.0.0.1";
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 429);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 41);
-            this.label2.TabIndex = 16;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            label2.AutoSize = true;
+            label2.Location = new Point(22, 209);
+            label2.Margin = new Padding(1, 0, 1, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 20);
+            label2.TabIndex = 16;
+            label2.Click += label2_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 222);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 41);
-            this.label1.TabIndex = 15;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.AutoSize = true;
+            label1.Location = new Point(15, 108);
+            label1.Margin = new Padding(1, 0, 1, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 15;
+            label1.Click += label1_Click;
             // 
-            // button2
+            // rekey_button
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(663, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 70);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Rekey\r\n";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            rekey_button.BackColor = SystemColors.ActiveCaption;
+            rekey_button.Location = new Point(312, 24);
+            rekey_button.Margin = new Padding(1);
+            rekey_button.Name = "rekey_button";
+            rekey_button.Size = new Size(73, 34);
+            rekey_button.TabIndex = 14;
+            rekey_button.Text = "Rekey\r\n";
+            rekey_button.UseVisualStyleBackColor = false;
+            rekey_button.Click += rekey_button_Click;
             // 
-            // textBox1
+            // messageBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(47, 486);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(772, 253);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            messageBox.Location = new Point(22, 237);
+            messageBox.Margin = new Padding(1);
+            messageBox.Multiline = true;
+            messageBox.Name = "messageBox";
+            messageBox.Size = new Size(365, 125);
+            messageBox.TabIndex = 12;
+            messageBox.TextChanged += (sender, e) => messageBox_TextChanged(sender, e);
             // 
             // server
             // 
-            this.server.AutoSize = true;
-            this.server.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.server.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.server.Location = new System.Drawing.Point(32, 50);
-            this.server.Name = "server";
-            this.server.Size = new System.Drawing.Size(200, 81);
-            this.server.TabIndex = 11;
-            this.server.Text = "Server";
-            this.server.Click += new System.EventHandler(this.client_Click);
+            server.AutoSize = true;
+            server.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            server.ForeColor = SystemColors.HotTrack;
+            server.Location = new Point(15, 24);
+            server.Margin = new Padding(1, 0, 1, 0);
+            server.Name = "server";
+            server.Size = new Size(100, 41);
+            server.TabIndex = 11;
+            server.Text = "Server";
+            server.Click += client_Click;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(234, 341);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(145, 54);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Stop";
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Location = new Point(110, 166);
+            button4.Margin = new Padding(1);
+            button4.Name = "button4";
+            button4.Size = new Size(68, 26);
+            button4.TabIndex = 22;
+            button4.Text = "Stop";
+            button4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 770);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.server);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(404, 376);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(rekey_button);
+            Controls.Add(messageBox);
+            Controls.Add(server);
+            Margin = new Padding(1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label server;
-        private System.Windows.Forms.Button button4;
+        private Button button3;
+        private Label label4;
+        private Label label3;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private Label label2;
+        private Label label1;
+        private Button rekey_button;
+        private TextBox messageBox;
+        private Label server;
+        private Button button4;
     }
 }
 

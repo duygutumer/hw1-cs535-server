@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using hw1_cs535_server_main;
 
 namespace Server
 {
     public partial class Form1 : Form
     {
+        private readonly TamperProofProcessor _tamperProofProcessor;
+        private byte[] _aesKey;
+
         public Form1()
         {
             InitializeComponent();
+
+            _tamperProofProcessor = new TamperProofProcessor(100);
+            _aesKey = _tamperProofProcessor.GetNewSessionKey();
         }
 
         private void client_Click(object sender, EventArgs e)
@@ -52,17 +59,13 @@ namespace Server
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void rekey_button_Click(object sender, EventArgs e)
         {
-
+            _aesKey = _tamperProofProcessor.GetNewSessionKey();
+            messageBox.Text = Encoding.UTF8.GetString(_aesKey);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void messageBox_TextChanged(object sender, EventArgs e)
         {
 
         }

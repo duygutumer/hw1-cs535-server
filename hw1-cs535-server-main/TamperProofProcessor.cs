@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿
+using System.Text;
 using System.Security.Cryptography;
 
 namespace hw1_cs535_server_main
@@ -31,17 +32,17 @@ namespace hw1_cs535_server_main
 
         public (byte[], byte[]) GetSessionHashes(int sessionNo)
         {
-            return (_passwordChain1[sessionNo - 1], _passwordChain2[_passwordChain2.Count - sessionNo + 1]);
+            return (_passwordChain1[sessionNo - 1], _passwordChain2[_passwordChain2.Count - sessionNo]);
         }
     }
 
     internal class TamperProofProcessor
     {
         private readonly PasswordData _passwordData;
-        private readonly int _sessionNo;
+        private int _sessionNo;
 
-        private const int HashSize = 256;
-        private const int KeySize = 128;
+        private const int HashSize = 256 / 8;
+        private const int KeySize = 128 / 8;
 
         public TamperProofProcessor(int sessionCount = 10, string password1 = "Duygu", string password2 = "Batuhan")
         {
@@ -66,9 +67,11 @@ namespace hw1_cs535_server_main
             return result;
         }
 
-        public byte[] GetSessionKey()
+        public byte[] GetNewSessionKey()
         {
             (byte[] hash1, byte[] hash2) = _passwordData.GetSessionHashes(_sessionNo);
+            _sessionNo++;
+
             byte[] xorHash = Xor(hash1, hash2);
 
             return xorHash.Take(KeySize).ToArray();
