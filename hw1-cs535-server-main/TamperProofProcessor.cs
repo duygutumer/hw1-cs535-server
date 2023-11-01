@@ -46,7 +46,7 @@ namespace hw1_cs535_server_main
 
         public TamperProofProcessor(int sessionCount = 10, string password1 = "Duygu", string password2 = "Batuhan")
         {
-            if (sessionCount < 0)
+            if (sessionCount < 1)
             {
                 throw new ArgumentException("Session count can not be lower than 1!");
             }

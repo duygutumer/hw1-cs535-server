@@ -29,10 +29,10 @@ namespace Server
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
+            listenButton = new Button();
             label4 = new Label();
             label3 = new Label();
-            textBox3 = new TextBox();
+            portText = new TextBox();
             textBox2 = new TextBox();
             label2 = new Label();
             label1 = new Label();
@@ -42,16 +42,16 @@ namespace Server
             button4 = new Button();
             SuspendLayout();
             // 
-            // button3
+            // listenButton
             // 
-            button3.Location = new Point(22, 166);
-            button3.Margin = new Padding(1);
-            button3.Name = "button3";
-            button3.Size = new Size(68, 26);
-            button3.TabIndex = 21;
-            button3.Text = "Start\r\n\r\n\r\n";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            listenButton.Location = new Point(22, 166);
+            listenButton.Margin = new Padding(1);
+            listenButton.Name = "listenButton";
+            listenButton.Size = new Size(68, 26);
+            listenButton.TabIndex = 21;
+            listenButton.Text = "Listen";
+            listenButton.UseVisualStyleBackColor = true;
+            listenButton.Click += listenButton_Click;
             // 
             // label4
             // 
@@ -75,15 +75,15 @@ namespace Server
             label3.Text = "Port:";
             label3.Click += label3_Click;
             // 
-            // textBox3
+            // portText
             // 
-            textBox3.Location = new Point(66, 127);
-            textBox3.Margin = new Padding(1);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(115, 27);
-            textBox3.TabIndex = 18;
-            textBox3.Text = "8090";
-            textBox3.TextChanged += textBox3_TextChanged;
+            portText.Location = new Point(66, 127);
+            portText.Margin = new Padding(1);
+            portText.Name = "portText";
+            portText.Size = new Size(115, 27);
+            portText.TabIndex = 18;
+            portText.Text = "8090";
+            portText.TextChanged += textBox3_TextChanged;
             // 
             // textBox2
             // 
@@ -135,7 +135,7 @@ namespace Server
             messageBox.Name = "messageBox";
             messageBox.Size = new Size(365, 125);
             messageBox.TabIndex = 12;
-            messageBox.TextChanged += (sender, e) => messageBox_TextChanged(sender, e);
+            messageBox.TextChanged += messageBox_TextChanged;
             // 
             // server
             // 
@@ -166,10 +166,10 @@ namespace Server
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(404, 376);
             Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(listenButton);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(portText);
             Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -186,10 +186,10 @@ namespace Server
 
         #endregion
 
-        private Button button3;
+        private Button listenButton;
         private Label label4;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox portText;
         private TextBox textBox2;
         private Label label2;
         private Label label1;
