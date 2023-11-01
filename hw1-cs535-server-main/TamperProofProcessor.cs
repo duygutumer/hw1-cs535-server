@@ -6,8 +6,8 @@ namespace hw1_cs535_server_main
 {
     internal class PasswordData
     {
-        private List<byte[]> _passwordChain1 = new(); // Backwards Secrecy
-        private List<byte[]> _passwordChain2 = new(); // Forward Secrecy
+        private readonly List<byte[]> _passwordChain1 = new(); // Backwards Secrecy
+        private readonly List<byte[]> _passwordChain2 = new(); // Forward Secrecy
 
         public void GeneratePasswordChains(string str1, string str2, int count)
         {
@@ -32,7 +32,7 @@ namespace hw1_cs535_server_main
 
         public (byte[], byte[]) GetSessionHashes(int sessionNo)
         {
-            return (_passwordChain1[sessionNo - 1], _passwordChain2[_passwordChain2.Count - sessionNo]);
+            return (_passwordChain1[sessionNo - 1], _passwordChain2[^sessionNo]);
         }
     }
 

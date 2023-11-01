@@ -1,25 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using hw1_cs535_server_main;
+﻿using hw1_cs535_server_main;
 
 namespace Server
 {
     public partial class Form1 : Form
     {
         private readonly TamperProofProcessor _tamperProofProcessor;
+        private readonly ServerLogic _serverLogic;
+
         private byte[] _aesKey;
-
-        private ServerLogic _serverLogic;
-
 
         public Form1()
         {
