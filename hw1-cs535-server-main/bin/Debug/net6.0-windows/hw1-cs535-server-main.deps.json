@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Server/1.0.0": {
+      "hw1-cs535-server-main/1.0.0": {
         "runtime": {
-          "Server.dll": {}
+          "hw1-cs535-server-main.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Server/1.0.0": {
+    "hw1-cs535-server-main/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

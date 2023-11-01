@@ -1,0 +1,17 @@
+D:\c++ projects\cs528\hw1-cs535-server-main\bin\Debug\net6.0-windows\hw1-cs535-server-main.exe
+D:\c++ projects\cs528\hw1-cs535-server-main\bin\Debug\net6.0-windows\hw1-cs535-server-main.deps.json
+D:\c++ projects\cs528\hw1-cs535-server-main\bin\Debug\net6.0-windows\hw1-cs535-server-main.runtimeconfig.json
+D:\c++ projects\cs528\hw1-cs535-server-main\bin\Debug\net6.0-windows\hw1-cs535-server-main.dll
+D:\c++ projects\cs528\hw1-cs535-server-main\bin\Debug\net6.0-windows\hw1-cs535-server-main.pdb
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\hw1-cs535-server-main.csproj.AssemblyReference.cache
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\Server.Form1.resources
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\hw1-cs535-server-main.csproj.GenerateResource.cache
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\hw1-cs535-server-main.GeneratedMSBuildEditorConfig.editorconfig
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\hw1-cs535-server-main.AssemblyInfoInputs.cache
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\hw1-cs535-server-main.AssemblyInfo.cs
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\hw1-cs535-server-main.csproj.CoreCompileInputs.cache
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\hw1-cs535-server-main.dll
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\refint\hw1-cs535-server-main.dll
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\hw1-cs535-server-main.pdb
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\hw1-cs535-server-main.genruntimeconfig.cache
+D:\c++ projects\cs528\hw1-cs535-server-main\obj\Debug\net6.0-windows\ref\hw1-cs535-server-main.dll

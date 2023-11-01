@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\c++ projects\\cs528\\Server\\Server.csproj": {}
+    "D:\\c++ projects\\cs528\\hw1-cs535-server-main\\hw1-cs535-server-main.csproj": {}
   },
   "projects": {
-    "D:\\c++ projects\\cs528\\Server\\Server.csproj": {
+    "D:\\c++ projects\\cs528\\hw1-cs535-server-main\\hw1-cs535-server-main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c++ projects\\cs528\\Server\\Server.csproj",
-        "projectName": "Server",
-        "projectPath": "D:\\c++ projects\\cs528\\Server\\Server.csproj",
+        "projectUniqueName": "D:\\c++ projects\\cs528\\hw1-cs535-server-main\\hw1-cs535-server-main.csproj",
+        "projectName": "hw1-cs535-server-main",
+        "projectPath": "D:\\c++ projects\\cs528\\hw1-cs535-server-main\\hw1-cs535-server-main.csproj",
         "packagesPath": "C:\\Users\\batuh\\.nuget\\packages\\",
-        "outputPath": "D:\\c++ projects\\cs528\\Server\\obj\\",
+        "outputPath": "D:\\c++ projects\\cs528\\hw1-cs535-server-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\batuh\\AppData\\Roaming\\NuGet\\NuGet.Config",

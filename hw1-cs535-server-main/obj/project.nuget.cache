@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OMkXpGyXC8Uds1V5AzpjhBJSCgz81UcpXHZ5+noJJ9rfgqdK61HxnZ3Ddb4Q0iFptOeXAWO0x8AvNCFZk+ZjfA==",
+  "dgSpecHash": "Pz7JQlzy8cfVBairq1VyONc+wjpVRWlS7P7dQqW5pKM5JMR7J/cTZbUIQrHLMaLsqsKi9fDAw5kKhAwgICiXIw==",
   "success": true,
-  "projectFilePath": "D:\\c++ projects\\cs528\\Server\\Server.csproj",
+  "projectFilePath": "D:\\c++ projects\\cs528\\hw1-cs535-server-main\\hw1-cs535-server-main.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

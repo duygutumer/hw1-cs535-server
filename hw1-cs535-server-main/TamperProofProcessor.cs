@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server
+namespace hw1_cs535_server_main
 {
     internal class TamperProofProcessor
     {
