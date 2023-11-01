@@ -1,0 +1,17 @@
+D:\c++ projects\cs528\Server\bin\Debug\net6.0-windows\Server.exe
+D:\c++ projects\cs528\Server\bin\Debug\net6.0-windows\Server.deps.json
+D:\c++ projects\cs528\Server\bin\Debug\net6.0-windows\Server.runtimeconfig.json
+D:\c++ projects\cs528\Server\bin\Debug\net6.0-windows\Server.dll
+D:\c++ projects\cs528\Server\bin\Debug\net6.0-windows\Server.pdb
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.csproj.AssemblyReference.cache
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.Form1.resources
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.csproj.GenerateResource.cache
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.AssemblyInfoInputs.cache
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.AssemblyInfo.cs
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.csproj.CoreCompileInputs.cache
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.dll
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\refint\Server.dll
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.pdb
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\Server.genruntimeconfig.cache
+D:\c++ projects\cs528\Server\obj\Debug\net6.0-windows\ref\Server.dll
