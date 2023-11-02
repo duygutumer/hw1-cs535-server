@@ -17,6 +17,10 @@ namespace Server
 {
     public partial class Form1 : Form
     {
+        private readonly TamperProofProcessor _tamperProofProcessor;
+        private byte[] _aesKey;
+        private Encryptor _encryptor;
+
         Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         List<Socket> clientSockets = new List<Socket>();
 
@@ -28,6 +32,9 @@ namespace Server
             Control.CheckForIllegalCrossThreadCalls = false;
             this.FormClosing += new FormClosingEventHandler(Form1_FormClosing);
             InitializeComponent();
+            _tamperProofProcessor = new TamperProofProcessor();
+            _aesKey = _tamperProofProcessor.GetNewSessionKey();
+            _encryptor = new Encryptor();
         }
 
         private void client_Click(object sender, EventArgs e)
@@ -67,7 +74,26 @@ namespace Server
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //rekey
+            _aesKey = _tamperProofProcessor.GetNewSessionKey();
+            string newKey = Convert.ToBase64String(_aesKey);
+            textBox4.AppendText("New key is: " + newKey);
+            string message = "Rekey";
+            Byte[] buffer = Encoding.Default.GetBytes(message);
+            foreach (Socket client in clientSockets)
+            {
+                try
+                {
+                    client.Send(buffer);
+                }
+                catch
+                {
+                    textBox4.AppendText("There is a problem! Check the connection...\n");
+                    terminating = true;
+                    serverSocket.Close();
+                }
 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -141,12 +167,22 @@ namespace Server
             {
                 try
                 {
-                    Byte[] buffer = new Byte[64];
+                    Byte[] buffer = new Byte[128];
                     thisClient.Receive(buffer);
 
                     string incomingMessage = Encoding.Default.GetString(buffer);
                     incomingMessage = incomingMessage.Substring(0, incomingMessage.IndexOf("\0"));
-                    textBox4.AppendText("Client: " + incomingMessage + "\n");
+                    if (incomingMessage == "Rekey")
+                    {
+                        _aesKey = _tamperProofProcessor.GetNewSessionKey();
+                        string newKey = Convert.ToBase64String(_aesKey);
+                        textBox4.AppendText("Get new session key after client's request: " + newKey + "\n");
+                    }
+                    else
+                    {
+                        string message = _encryptor.Decrypt(Encoding.Default.GetBytes(incomingMessage), _aesKey);
+                        textBox4.AppendText("Server: " + message + "\n");
+                    }
                 }
                 catch
                 {
@@ -173,15 +209,22 @@ namespace Server
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //send message
             string message = textBox1.Text;
+           
             if (message != "" && message.Length <= 64)
             {
-                Byte[] buffer = Encoding.Default.GetBytes(message);
+                (byte[] IV, byte[] ctext) = _encryptor.Encrypt(_aesKey, message);
+                Byte[] combined = new byte[IV.Length + ctext.Length];
+
+                Array.Copy(IV, combined, IV.Length);
+                Array.Copy(ctext, 0, combined, IV.Length, ctext.Length);
+
                 foreach (Socket client in clientSockets)
                 {
                     try
                     {
-                        client.Send(buffer);
+                        client.Send(combined);
                     }
                     catch
                     {
